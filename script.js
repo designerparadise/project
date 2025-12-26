@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Плавный скролл для якорей (для старых браузеров, современные поддерживают CSS scroll-behavior)
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
@@ -11,8 +10,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
-
-    // Дополнительно: закрывать другие вопросы в FAQ при открытии нового (опционально)
     const details = document.querySelectorAll("details");
     details.forEach((targetDetail) => {
         targetDetail.addEventListener("click", () => {
@@ -23,4 +20,5 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     });
+
 });
